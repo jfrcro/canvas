@@ -4,6 +4,8 @@ var lienzo = d.getContext("2d");
 var lineas = 30;
 var l = 0;
 
+dibujarLinea("#AAF", 0, 0, 0, 300);
+dibujarLinea("#AAF", 0, 300, 300, 300);
 
 while(l < lineas)
 {
