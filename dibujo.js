@@ -1,11 +1,14 @@
-var d = document.getElementById("dibujito");  // metodo del documento que trae elemento mediante su id con un solo parametro "string"
-var lienzo = d.getContext("2d");    //metodo del canvas que viene desde d. d es canvas
+var d = document.getElementById("dibujito");
+var lienzo = d.getContext("2d");
 console.log(lienzo);
 
-lienzo.beginPath();          //iniciar dibujo, arrancar un traso
-lienzo.strokeStyle = "blue";  // variable, atributo o propiedad de lienzo que es el contexto 2d del canvas
-lienzo.moveTo(50, 10);     // metodo o funcion del canvas para ubicar el lapiz donde arranca linea (parametros dobles)
-lienzo.lineTo(250, 2);     //hacia donde se traza la linea
-lienzo.stroke();             //hace el trazo
-lienzo.colsePath();          //cierra dibujo, el trazo , permite reabrir la proxima linea
+
+dibujarLinea(color, xinicial, yinicial, xfinal, yfinal);
+
+lienzo.beginPath();
+lienzo.strokeStyle = color;
+lienzo.moveTo(xinicial, yinicial);
+lienzo.lineTo(xfinal, yfinal);
+lienzo.stroke();
+lienzo.colsePath();
 
