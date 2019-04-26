@@ -1,15 +1,13 @@
 var botonClick = document.getElementById("boton");
-// var actual = document.getElementById("actual");
-// var base = "2080";
-// var edadctual = parseInt(actual);
+var tNacido = document.getElementById("nacido");
+botonClick.addEventListener("click", calculaEdad);
 
-botonClick.addEventListener("click", alerta);
-
-
-function alerta()
+function calculaEdad()
 {
-alert("boton");
-// 	edadFinal = base - aNacido;
-// 	document.write(edadFinal);
+  var base = 2080;
+  var vNacido = parseInt(tNacido.value);
+	var edadFinal = base - vNacido;
+	// document.write(edadFinal);
+  alert("Para entonces, tendrás " + edadFinal + " Años.");
+// console.log(edadFinal);
 }
-
