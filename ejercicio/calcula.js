@@ -9,8 +9,10 @@ function calc()
   var f = new Date();
   var ano = f.getFullYear();
   var anoEnQueNacio = ano - edad;
-  // console.log(anoEnQueNacio);
-  if (anoEnQueNacio >= 1896 && anoEnQueNacio <= ano) 
+  var aInicial = ano - 150;
+  
+  console.log(aInicial);
+  if (anoEnQueNacio >= aInicial && anoEnQueNacio <= ano) 
   {
     alert("ok");
   }
