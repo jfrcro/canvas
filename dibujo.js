@@ -11,13 +11,12 @@ dibujarLinea(colorLineas, 0, 0, 0, 300);
 dibujarLinea(colorLineas, 0, 300, 300, 300);
 
 
-while(l < lineas)
+for(l = 0; l < lineas; l++)
 {
   yinicial = 10 * l; 
   xfinal = 10 * (l + 1);
   dibujarLinea(colorLineas, 0, yinicial, xfinal, 300);
   console.log("linea " + l)
-  l++;
 }
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
