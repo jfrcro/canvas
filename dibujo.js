@@ -4,16 +4,20 @@ var lienzo = d.getContext("2d");
 var lineas = 30;
 var l = 0;
 
-dibujarLinea("#AAF", 0, 0, 0, 300);
-dibujarLinea("#AAF", 0, 300, 300, 300);
+var yinicial, xfinal;
+var colorLineas = "#AAF";
+
+dibujarLinea(colorLineas, 0, 0, 0, 300);
+dibujarLinea(colorLineas, 0, 300, 300, 300);
+
 
 while(l < lineas)
 {
-  var yinicial = 10 * l; 
-  var xfinal = 10 * (l + 1);
-  dibujarLinea("#AAF", 0, yinicial, xfinal, 300);
+  yinicial = 10 * l; 
+  xfinal = 10 * (l + 1);
+  dibujarLinea(colorLineas, 0, yinicial, xfinal, 300);
   console.log("linea " + l)
-  l = l + 1;
+  l++;
 }
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
