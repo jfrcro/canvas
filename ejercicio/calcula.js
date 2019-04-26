@@ -1,13 +1,18 @@
-var botonClick = document.getElementById("boton");
-var tNacido = document.getElementById("nacido");
-botonClick.addEventListener("click", calculaEdad);
+var texto = document.getElementById("nacido");
+var eject = document.getElementById("boton");
 
-function calculaEdad()
+eject.addEventListener("click", calc);
+
+function calc()
 {
-  var base = 2080;
-  var vNacido = parseInt(tNacido.value);
-	var edadFinal = base - vNacido;
-	// document.write(edadFinal);
-  alert("Para entonces, tendrás " + edadFinal + " Años.");
-// console.log(edadFinal);
+  var edad = parseInt(texto.value);
+  var f = new Date();
+  var ano = f.getFullYear();
+  var anoEnQueNacio = ano - edad;
+  // console.log(anoEnQueNacio);
+  if (anoEnQueNacio >= 1896 && anoEnQueNacio <= ano) 
+  {
+    alert("ok");
+  }
+
 }
