@@ -7,15 +7,15 @@ var l = 0;
 var yinicial, xfinal;
 var colorLineas = "#AAF";
 
-dibujarLinea(colorLineas, 0, 0, 0, 300);
-dibujarLinea(colorLineas, 0, 300, 300, 300);
+dibujarLinea(colorLineas, 0, 0, 300, 0);
+dibujarLinea(colorLineas, 300, 0, 300, 300);
 
 
 for(l = 0; l < lineas; l++)
 {
-  yinicial = 10 * l; 
-  xfinal = 10 * (l + 1);
-  dibujarLinea(colorLineas, 0, yinicial, xfinal, 300);
+  xinicial = 10 * l; 
+  yfinal = 10 * (l + 1);
+  dibujarLinea(colorLineas, xinicial, 0, 300, yfinal);
   console.log("linea " + l)
 }
 
