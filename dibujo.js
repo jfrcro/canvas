@@ -5,6 +5,7 @@ boton.addEventListener("click", dibujoPorClick);
 
 function dibujoPorClick()
 {
+	var xxx = parseInt(texto.value);
 	alert("escuchando");
 }
 
