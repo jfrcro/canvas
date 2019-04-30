@@ -5,17 +5,26 @@ eject.addEventListener("click", calc);
 
 function calc()
 {
-  if (texto.value!="") 
+  if (texto.value!="" && texto.value!="0") 
   {
-    var base = 2060
+    var base = 2050
     var f = new Date();
     var ano = f.getFullYear();
     var edad = parseInt(texto.value);
-    edadFinal = edad + base - ano;
-    alert("En el 2060 tendrás " + edadFinal + " años.");
+ 
+    if (texto.value <= 122) 
+    {
+      edadFinal = edad + base - ano;
+       alert("En el 2050 tendrás " + edadFinal + " años.");
+    }
+    else if (texto.value > 122)
+    {
+      edadFinal = edad + base - ano; 
+       alert("Record! en el 2050 tendrás " + edadFinal + " años.");
+    }
   }
   else
   {
-    alert("Ingresa tu edad.");
+    alert("no recibí tu edad.");
   }
 }

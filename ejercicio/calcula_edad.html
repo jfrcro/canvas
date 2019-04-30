@@ -5,18 +5,16 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
-<body class="cuerpo">
-<h1 class="titulo">Año 2019</h1>
-<!-- <h3>Aqui puedes calcular tu edad para el 2050</h3> -->
-<!-- <p>El dato que ingresarás no se almacenará en ninguna parte.</p> -->
-<form>
-  <fieldset name="fielset">
-    <legend for="fielset">Cuantos años cumplirás este año?.</legend>
-    <input type="text" id="nacido">
-    <button id="boton">a ver..</button>
-  </fieldset>  
-</form>
-<script type="text/javascript" src="calcula.js">  
-</script>
-</body>
+  <body>
+  	<form method="post">
+      <fieldset>
+        <legend>Calcula tu edad en el 2050</legend>
+        <input type="text" id="nacido" placeholder="tu edad" autofocus required>
+        <input type="submit" id="boton" value="Calcular" autocomplete="nope">
+        <p><em>El dato que ingresarás no se almacenará en ninguna parte.</em></p>
+        <p><em>Según la organización Guinness World Records, el récord de longevidad oficial lo tiene la francesa Jeanne Louise Calment, quien vivió 122 años y 164 días, y falleció en agosto de 1997.</em></p>
+      </fieldset>  
+  	</form>
+    <script type="text/javascript" src="calcula.js"></script>
+  </body>
 </html>
