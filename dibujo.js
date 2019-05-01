@@ -8,8 +8,7 @@ var lienzo = d.getContext("2d");
 
 function dibujoPorClick()
 {
-	var xxx = parseInt(texto.value);
-  var lineas = 30;
+  var lineas = parseInt(texto.value);
   var l = 0;
 
   var yinicial, xfinal;
@@ -18,16 +17,18 @@ function dibujoPorClick()
   dibujarLinea(colorLineas, 0, 0, 0, 300);
   dibujarLinea(colorLineas, 0, 300, 300, 300);
 
+  var ancho = d.width;
+  var espacio = ancho / lineas;
+  // console.log(espacio);
+
   for(l = 0; l < lineas; l++)
   {
-    yinicial = 10 * l; 
-    xfinal = 10 * (l + 1);
+    yinicial = espacio * l; 
+    xfinal = espacio * (l + 1);
     dibujarLinea(colorLineas, 0, yinicial, xfinal, 300);
     console.log("linea " + l)
   }
 }
-
-
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 {
